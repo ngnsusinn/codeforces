@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+
+#define inf 1e8
+#define ll long long
+#define ld long double
+#define pii pair<int, int>
+#define pll pair<ll, ll>
+#define vi vector<int>
+#define vvi vector<vi>
+#define pb push_back
+#define mp make_pair
+#define fi first
+#define se second
+
+const int INF = 1e9;
+const ld EPS = 1e-9;
+const ll MOD = 1e9+7;
+
+#define FOR(i, a, b) for(int i = a; i <= b; i++)
+#define FORN(i, a, b) for (int i = a; i < b; i++)
+#define REP(i, n) FOR(i, 0, n)
+#define MAX(a, b) a = max(a, b)
+#define MIN(a, b) a = min(a, b)
+#define RESET(a, b) memset(a, b, sizeof(a))
+#define ALL(v) v.begin(), v.end()
+#define SIZE(v) (int)v.size()
+#define SORT(v) sort(ALL(v))
+#define REVERSE(v) reverse(ALL(v))
+
+using namespace std;
+
+string solve(string t){
+	int lp = 0, rp = 0;
+	FOR(i, 0, 2) lp += t[i];
+	FOR(i, 3, 5) rp += t[i];
+	if (lp == rp) return "YES";
+	return "NO";
+}
+
+int main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	int n;
+	cin >> n;
+	FORN(i, 0, n){
+		string t;
+		cin >> t;
+		cout << solve(t) << '\n';
+	}	
+	return 0;
+}
