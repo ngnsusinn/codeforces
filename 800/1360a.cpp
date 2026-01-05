@@ -39,10 +39,7 @@ int main(){
 	WS(t){
 		int a, b;
 		cin >> a >> b;
-		int i = sqrt(a*b*2);
-		while (i*i< a*b*2) i++;
-		if (a == b) cout << a*b*4 << edl;
-		else cout << i*i << edl;
+		cout << max(2*min(a,b), max(a,b))*max(2*min(a,b), max(a,b)) << edl;
 	}	
 	return 0;
 }
